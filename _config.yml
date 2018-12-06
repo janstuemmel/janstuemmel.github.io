@@ -1,0 +1,16 @@
+
+colors: 
+  - "#16a085"
+  - "#8e44ad"
+  - "#2980b9"
+  - "#d35400"
+  - "#f39c12"
+  - "#6c5ce7"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

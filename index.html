@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{% assign postLimit = 5 %}
+{% for i in (0..site.posts.size) limit:postLimit %}
+  {% assign post = site.posts[i] %}
+  {% if post.ext == '.md' %}
+  {% assign colorIdx = i | modulo: site.colors.size %}
+  {% assign color = 'style="color: ' | append: site.colors[colorIdx] | append: '"' %}
+    <article>
+      <h1 class="post-title">
+        <a href="{{ post.url | prepend: site.baseurl }}" {{ color }}">{{ post.title }}</a>
+      </h1>
+      <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+      <div class="post-content">
+        {{ post.excerpt }}
+      </div>
+    </article>
+  {% endif %}
+{% endfor %} 
+
+{% if site.posts.size > postLimit %}
+<div class="archive-link">
+  <a href="/archive.html">archive</a>
+</div>
+{% endif %}
