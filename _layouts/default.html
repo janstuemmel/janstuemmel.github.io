@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>{{ site.title }}</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-  <meta name="description" content="janstuemmel.de">
-  <meta name="keywords" content="jan stümmel, programming, go, php, node, javascript, js, berlin, freising, germany">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
   <meta name="theme-color" content="#16a085">
-  <title>janstuemmel.de</title>
   <link rel="stylesheet" href="/main.css" type="text/css">
   <link rel="stylesheet" href="/highlight.css" type="text/css">
 </head>
@@ -14,16 +14,16 @@
   <div class="container">
     <header>
       <div class="navigation">
-        <div class="navigation-left"><a href="/" style="color: #000">janstuemmel.de</a></div>
+        <div class="navigation-left"><a href="/" style="color: #000">{{ site.title }}</a></div>
         <div class="navigation-right">
           <span><a target="_BLANK" href="https://github.com/janstuemmel" style="color: #c0392b">github</a></span>
-          <span><a href="mailto:info@janstuemmel.de" style="color: #8e44ad">mail</a></span>
+          <span><a href="mailto:{{ site.mail }}" style="color: #8e44ad">{{ site.mail }}</a></span>
         </div>
       </div>
     </header>
     <main>{{ content }}</main>
     <footer>
-      &#169; 2018 Jan Stümmel. Site generated with Jekyll. Hosted by Github Pages.
+      &#169; {{ site.time | date: "%Y" }} Jan Stümmel. Site generated with Jekyll. Hosted by Github Pages.
       <a href="/privacy.html">Privacy</a>.
     </footer>
   </div>
