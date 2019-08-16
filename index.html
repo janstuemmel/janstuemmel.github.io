@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign postLimit = 5 %}
+{% assign postLimit = 6 %}
 {% for i in (0..site.posts.size) limit:postLimit %}
   {% assign post = site.posts[i] %}
   {% if post.ext == '.md' %}
