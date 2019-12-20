@@ -7,10 +7,9 @@ layout: default
   {% assign post = site.posts[i] %}
   {% if post.ext == '.md' %}
   {% assign colorIdx = i | modulo: site.colors.size %}
-  {% assign color = 'style="color: ' | append: site.colors[colorIdx] | append: '"' %}
     <article>
       <h1 class="post-title">
-        <a href="{{ post.url | prepend: site.baseurl }}" {{ color }}">{{ post.title }}</a>
+        <a href="{{ post.url | prepend: site.baseurl }}" style="color: {{ site.colors[colorIdx] }}">{{ post.title }}</a>
       </h1>
       <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
       <div class="post-content">
